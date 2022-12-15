@@ -8,7 +8,7 @@ A tool to collect statistics for WARC files indexed in OutbackCDX
 ./outbackcdx-statistics.pl [<options>]
 ```
 
-Details on the `<options>` can be found by
+Details on the `<options>` can be found by running
 
 ```
 ./outbackcdx-statistics.pl --help
@@ -16,12 +16,21 @@ Details on the `<options>` can be found by
 
 ## Description
 
-Fetches the OutbackCDX index and prints the number and size of stored objects for each
-collection, month, top level domain, 2nd level domain, content-type and file extension.
+Fetches the [OutbackCDX](https://github.com/nla/outbackcdx) index and prints the number
+and size of stored objects for each collection, month, top level domain, 2nd level
+domain, content-type and file extension.
 
 Collection names are read from the OutbackCDX data directory unless given as arguments.
 
 May optionally re-calculate previously collected data read from a CSV-file.
+
+## Requirements
+
+The tool needs a standard Perl 5.8 or later or an older Perl version plus the
+Time::Piece module. Also HTTP access to an OutbackCDX index is required. Access to the
+OutbackCDX data directory is needed to avoid having to type the collection names as
+command line arguments. The `curl` command is used to fetch the CDX data and `gzip` or
+`bzip2` is needed to compress and decompress the output and input files.
 
 ## Reason
 
@@ -42,7 +51,7 @@ If someone else finds this tool useful we're happy to share - see below.
 
 ## Source code
 
-The tool can be found at https://github.com/krakan/outbackcdx-statistics/
+This tool can be found at https://github.com/krakan/outbackcdx-statistics/
 
 ## License
 
