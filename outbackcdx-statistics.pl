@@ -91,7 +91,7 @@ GetOptions(
     'i|f|in|infile=s'=>\$infile,
     '9|tab'=>sub {$c = "\t"},
     'O|outbackDir=s'=>\$outbackDir,
-    'H|host|outbackHost=s'=>\$outbackPort,
+    'H|host|outbackHost=s'=>\$outbackHost,
     'P|port|outbackPort=s'=>\$outbackPort,
     'y|year'=>\$year,
     'm|maintype'=>\$main,
